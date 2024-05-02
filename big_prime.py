@@ -18,6 +18,7 @@ def Miller_Rabin(p):
     for r in range(s-1):
         ad=pow(ad,2,p)
         if ad==p-1: return True
+        if not (ad == p-1 or ad == 1): return False
     return False
         
 def Bprime(bits,k=100):
